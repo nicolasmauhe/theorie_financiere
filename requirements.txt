@@ -1,2 +1,4 @@
-bt
-cvxopt
+numpy
+scipy.optimize
+pandas
+matplotlib.pyplot
