@@ -7,7 +7,6 @@ dependencies:
   - numpy
   - matplotlib
   - pandas
+  - scipy
   - quandl
   - rise
-  - pip:
-    - bt
