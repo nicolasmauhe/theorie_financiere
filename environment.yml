@@ -11,4 +11,4 @@ dependencies:
   - quandl
   - rise
   - pip3:
-    - xelatex
+    - texlive-xetex
