@@ -10,5 +10,5 @@ dependencies:
   - scipy
   - quandl
   - rise
-  - pip:
+  - pip3:
     - xelatex
