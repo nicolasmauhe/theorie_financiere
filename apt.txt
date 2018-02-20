@@ -1,1 +1,2 @@
+texlive-full
 texlive-xetex
