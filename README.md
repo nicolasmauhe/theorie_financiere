@@ -2,7 +2,7 @@
 
 Théorie Financière, M1 IREF, Université de Bordeaux
 
-Le cours prend la forme de notebooks avec des calculs et des graphes réalisés à l'aide de Python. Il est possible de lancer une instance en ligne du cours en cliquant sur les boutons Binder ci-dessous, ou de télécharger les notebooks depuis [la page Github du cours](https://github.com/nicolasmauhe/theorie_financiere). 
+Le cours prend la forme de notebooks avec des calculs et des graphes réalisés à l'aide de Python. Il est possible de lancer une instance en ligne du cours en cliquant sur les boutons Binder ci-dessous, ou de télécharger les notebooks plus haut. 
 
 ## Sommaire
 
