@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-<title>Partie_3</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>Partie_3-Copy1</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 <style type="text/css">
@@ -12752,7 +12752,446 @@ $$E(r_Q) = r_f + (E(r_{p1}) - r_f)\beta_{p1} + (E(r_{p2}) - r_f)\beta_{p2}$$</p>
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Estimation-de-donn&#233;es-r&#233;elles">Estimation de donn&#233;es r&#233;elles<a class="anchor-link" href="#Estimation-de-donn&#233;es-r&#233;elles">&#182;</a></h2>
+<h3 id="Th&#233;orie">Th&#233;orie<a class="anchor-link" href="#Th&#233;orie">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Le modèle APT peut se généraliser à plusieurs sources de risques. Comment les identifier ? Lesquelles sont nécessaires ? Un modèle relativement éprouvé est le modèle Fama-French a trois facteurs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Si une source de risque est non identifiée par le CAPM (ou l'APT a un facteur), quelles sont les conséquences ?</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Compte-tenu de l'intelligence du marché, les conséquences probables sont une adaptation plus ou moins consciente des agents face à des actifs qui présentent une sensibilité à ces risques.
+A rendement égal, ils préfereront les fuir : "ce type d'actif a tendance à être risqué, pour ce prix là cela ne vaut pas la peine".
+Ce qui va entraîner une baisse des prix et donc une augmentation du rendement jusqu'à ce que le "surplus" de rendement compense le surplus de risque.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Conséquence : un alpha positif dans le CAPM classique pour les actifs sensible à cette nouvelle source de risque, et négatif pour les autres.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les sources de risques supplémentaires par rapport au risque systémique peuvent donc être identifiée via les alphas positifs de certaines catégories d'actifs.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Le point de départ du travail de Fama et French, c'est l'identification de deux de ces facteurs:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ol>
+<li>La taille des entreprises (par capitalisation boursière) semble jouer de manière négative sur l'alpha: les petites entreprises semble avoir des alpha positifs, c'est à dire des surplus de rendements non expliqués par leur bêta, leur sensibilité au risque systémique.</li>
+<li>Le ratio Book-to-market (B/M) semble être lié positivement avec l'alpha des actifs. Le ratio B/M désigne le ratio entre la valeur comptable et la valeur boursière de l'entreprise. </li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Un ratio B/M élevé peut signifier plusieurs choses:</p>
+<ul>
+<li>l'entreprise est sous-évaluée par le marché</li>
+<li>l'entreprise génère ses revenus grâce à ses infrastructures et ne dispose pas d'autre atout (talent managérial, créneau porteur, potentiel scientifique) non valorisables comptablement. </li>
+<li>l'entreprise semble avoir un potentiel (non réalisé par définition) faible</li>
+<li>l'entreprise connaît des difficultés immédiates qui ne sont pas (encore ?) répercutées sur la valeur comptable.</li>
+</ul>
+<p>Pour la deuxième raison, on appelle ces actifs des <em>value assets</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>A l'inverse, les entreprises avec un ratio B/M faible sont tout l'inverse :</p>
+<ul>
+<li>l'entreprise est sur-évaluée (hype ? bulle ?)</li>
+<li>l'entreprise tire sa valeur d'éléments non valorisables comptablement (Uber : une idée novatrice, une réputation mondiale.)</li>
+<li>l'entreprise dispose d'un potentiel (entreprises avec beaucoup de dette mais jugées prometteuses par le marché, comme Amazon, Facebook à ses débuts, etc. Kodak qui annonce son <em>intention</em> d'utiliser un processus basé sur blockchain)</li>
+<li>l'entreprise connaît des résultats récents très bons, ce qui reste à être traduit comptablement.</li>
+</ul>
+<p>On appelle ces entreprises assez logiquement des <em>growth assets</em>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Il reste à lier ces éléments avec des facteurs de risques non systémiques. Les observations empiriques sont relativement bien documentées, mais les explications de ces facteurs restent des questions ouvertes. Quels sont les risques liés ? Quelques éléments :</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans le cas de la taille des entreprises, les éléments avancés sont:</p>
+<ul>
+<li>La taille des petites structures les rend plus fragiles et elles peuvent être affectées par certaines conditions de marché qui laissent les grosses entreprises indifférentes, ou moins sensibles (par exemple, une restriction des liquidités). A l'inverse, dans certaines conditions de marché changeantes, elle peuvent s'adapter plus rapidement, (proportionnellement) trouver plus facilement des financements et donc croître plus vite (en pourcentage). Il y a donc une volatilité des rendements supplémentaires, qui s'ajoute à la sensibilité systémique / macroéconomique et qui n'est pas diversifiable.</li>
+<li>Dans certaines conditions de marché, les investisseurs peuvent avoir un comportement de retrait vers les valeurs plus rassurantes représentées par les grosses entreprises. A l'inverse, dans certaines situations les investisseurs peuvent rechercher plus de sources de rendements et s'intéresser aux petites structures. Ces mouvements peuvent maintenir globalement le rendement du marché (puisque il n'y a pas de fuite vers l'actif sans risque ou autre) mais créeent une source de risque détachée du risque systémique, lié à la taille des entreprises et non diversifiable (Hypothèse comportementale).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Dans le cas du ratio B/M, les éléments généralement avancés sont :</p>
+<ul>
+<li>Il peut parfois s'agir d'entreprises en difficulté : ce facteur peut donc capter des sources de risques diverses non systémiques</li>
+<li>Le "potentiel" et les atouts non comptables peuvent changer beaucoup plus rapidement que les éléments comptables; les conditions technologiques, les recrutements, les perspectives peuvent évoluer avec beaucoup plus d'incertitude qu'un parc immobilier par exemple, selon la vision du marché sur une certaine classe d'actif. Par exemple, en ce moment sur les valeurs technologiques avec la réalisation des risques que font peser les gros collecteurs de données personnelles.</li>
+<li>Ce même potentiel et ces atouts comptables sont beaucoup plus sujets à l'avis changeant du marché, tandis que la valorisation comptable l'est beaucoup moins. Il ya donc une source d'incertitude (Hypothèse comportementale).</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Pratique">Pratique<a class="anchor-link" href="#Pratique">&#182;</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Les données sont disponibles sur le site du <a href="http://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html">Pr. French</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Importer-les-packages">Importer les packages<a class="anchor-link" href="#Importer-les-packages">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
+<span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/xubuntu/.local/lib/python3.5/site-packages/statsmodels/compat/pandas.py:56: FutureWarning: The pandas.core.datetools module is deprecated and will be removed in a future version. Please use the pandas.tseries module instead.
+  from pandas.core import datetools
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">quandl</span>
+<span class="n">cle_API</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+<span class="n">quandl</span><span class="o">.</span><span class="n">ApiConfig</span><span class="o">.</span><span class="n">api_key</span> <span class="o">=</span> <span class="n">cle_API</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Ouvrir-les-donn&#233;es-de-Fama---French">Ouvrir les donn&#233;es de Fama - French<a class="anchor-link" href="#Ouvrir-les-donn&#233;es-de-Fama---French">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+<span class="n">fichier</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;F-F_Research_Data_Factors.CSV&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+
+<span class="nb">next</span><span class="p">(</span><span class="n">fichier</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ligne</span> <span class="ow">in</span> <span class="n">fichier</span><span class="p">:</span>
+    <span class="n">data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">ligne</span><span class="o">.</span><span class="n">strip</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">))</span>
+    
+<span class="n">fichier</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Mkt-RF&#39;</span><span class="p">,</span> <span class="s1">&#39;SMB&#39;</span><span class="p">,</span> <span class="s1">&#39;HML&#39;</span><span class="p">,</span> <span class="s1">&#39;RF&#39;</span><span class="p">])</span>
+<span class="n">data</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[]
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+<div class="prompt output_prompt">Out[4]:</div>
+
+
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Mkt-RF</th>
+      <th>SMB</th>
+      <th>HML</th>
+      <th>RF</th>
+    </tr>
+    <tr>
+      <th>Time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>201709</th>
+      <td>2.51</td>
+      <td>4.53</td>
+      <td>3.02</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>201710</th>
+      <td>2.25</td>
+      <td>-1.95</td>
+      <td>-0.08</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>201711</th>
+      <td>3.12</td>
+      <td>-0.63</td>
+      <td>0.02</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <th>201712</th>
+      <td>1.06</td>
+      <td>-1.27</td>
+      <td>0.11</td>
+      <td>0.09</td>
+    </tr>
+    <tr>
+      <th>201801</th>
+      <td>5.57</td>
+      <td>-3.07</td>
+      <td>-1.42</td>
+      <td>0.11</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="T&#233;l&#233;charger-les-donn&#233;es-de-Quandl">T&#233;l&#233;charger les donn&#233;es de Quandl<a class="anchor-link" href="#T&#233;l&#233;charger-les-donn&#233;es-de-Quandl">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Harmoniser-l'index-avec-les-donn&#233;es-de-Fama---French">Harmoniser l'index avec les donn&#233;es de Fama - French<a class="anchor-link" href="#Harmoniser-l'index-avec-les-donn&#233;es-de-Fama---French">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">dates</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">actions</span><span class="o">.</span><span class="n">index</span><span class="o">.</span><span class="n">values</span><span class="p">:</span>
+    <span class="n">dates</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)[:</span><span class="mi">4</span><span class="p">]</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">item</span><span class="p">)[</span><span class="mi">5</span><span class="p">:</span><span class="mi">7</span><span class="p">]))</span>
+<span class="n">actions</span><span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">dates</span>
+<span class="n">actions</span><span class="o">.</span><span class="n">set_index</span><span class="p">(</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">actions</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Cr&#233;er-un-portefeuille-avec-des-poids-&#233;gaux">Cr&#233;er un portefeuille avec des poids &#233;gaux<a class="anchor-link" href="#Cr&#233;er-un-portefeuille-avec-des-poids-&#233;gaux">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Fusionner-les-deux-jeux-de-donn&#233;es-en-utilisant-la-m&#233;thode-join()-des-DataFrames">Fusionner les deux jeux de donn&#233;es en utilisant la m&#233;thode join() des DataFrames<a class="anchor-link" href="#Fusionner-les-deux-jeux-de-donn&#233;es-en-utilisant-la-m&#233;thode-join()-des-DataFrames">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Soustraire-le-taux-de-l'actif-sans-risque-et-harmoniser-les-donn&#233;es-(d&#233;cimales)">Soustraire le taux de l'actif sans risque et harmoniser les donn&#233;es (d&#233;cimales)<a class="anchor-link" href="#Soustraire-le-taux-de-l'actif-sans-risque-et-harmoniser-les-donn&#233;es-(d&#233;cimales)">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="Conduire-une-r&#233;gression-du-mod&#232;le-CAPM,-puis-du-mod&#232;le-Fama-French-a-trois-facteurs,-et-comparer.">Conduire une r&#233;gression du mod&#232;le CAPM, puis du mod&#232;le Fama-French a trois facteurs, et comparer.<a class="anchor-link" href="#Conduire-une-r&#233;gression-du-mod&#232;le-CAPM,-puis-du-mod&#232;le-Fama-French-a-trois-facteurs,-et-comparer.">&#182;</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Facteurs supplémentaires considérés :</p>
+<ul>
+<li>facteur "momentum" : éléments empiriques mais difficile à justifier</li>
+</ul>
+<p>Fama et French ont ajouté deux facteurs récemment (2015) :</p>
+<ul>
+<li>les actifs présentant une rentabilité élevée sur-performent : lié à un risque pesant sur l'actualisation des cash-flows ?</li>
+<li>les actifs procédant à de forts investissement sous-performent : lié à une "sécurisation" de leur potentiel ?</li>
+</ul>
+
 </div>
 </div>
 </div>
