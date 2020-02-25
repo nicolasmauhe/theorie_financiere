@@ -8,6 +8,6 @@ Le cours prend la forme de notebooks avec des calculs et des graphes réalisés 
 
 1. [Théorie moderne du portefeuille](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_1.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_1.ipynb)
 2. [Capital Asset Pricing Model](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_2.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_2.ipynb)
-3. [Evaluation par arbitrage](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_5.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_3.ipynb)
+3. [Evaluation par arbitrage](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_3.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_3.ipynb)
 4. [L'efficacité des marchés financiers](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_4.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_4.ipynb)
-5. [Options](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_1.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_5.ipynb)
+5. [Options](https://github.com/nicolasmauhe/theorie_financiere/blob/master/Partie_5.ipynb) [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/nicolasmauhe/theorie_financiere/master?filepath=Partie_5.ipynb)
